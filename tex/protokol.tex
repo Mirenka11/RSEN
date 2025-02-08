@@ -39,20 +39,18 @@
 
 \section{Sestavení experimentu}
 
-\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+\begin{figure}[!hbt]
 	\centering
-	\includegraphics[]{img/schema_regulovane_soustavy.png} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-	%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
-	\caption{Schéma regulované soustavy.} %popisek obrázku, který se zobrazí pod obrázkem
-	\label{fig:schema_reg} %interní popis obrázku, který použijete k odkazování se
+	\includegraphics[]{img/schema_regulovane_soustavy.png} 
+	\caption{Schéma regulované soustavy.} 
+	\label{fig:schema_reg}
 \end{figure}	
 
-\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+\begin{figure}[!hbt] 
 	\centering
-	\includegraphics[]{img/schema_PID_regulatoru.png} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-	%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
-	\caption{Schéma PID regulátoru.} %popisek obrázku, který se zobrazí pod obrázkem
-	\label{fig:schema_PID} %interní popis obrázku, který použijete k odkazování se
+	\includegraphics[]{img/schema_PID_regulatoru.png} 
+	\caption{Schéma PID regulátoru.} 
+	\label{fig:schema_PID}
 \end{figure}		
 		
 Na obrázku Obr.\ref{fig:schema_reg} je vyobrazeno schéma regulované soustavy, na obrázku Obr.\ref{fig:schema_PID} pak schéma PID regulátoru.
@@ -76,15 +74,14 @@ Na obrázku Obr.\ref{fig:schema_reg} je vyobrazeno schéma regulované soustavy,
 		V celém rozsahu (-1.6 V - 1.6 V) statická charakteristika lineární není, avšak mezi -0.8V až -0.6V a poté 0.6V až 0.8 V ji za lineární považovat lze.
 		Pro kladnou větev je funkční závislost statické charakteristiky dána předpisem $$y=(-11.9\pm 0.9)x+(-6.6\pm 0.7)$$ a pro zápornou větev pak $$y=(-10.9\pm 0.9)x+(6\pm 0.6),$$ 
 		kde $y$ je výstupní veličina v mV a $x$ je vstupní veličina ve V. 
-		\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+		\begin{figure}[!hbt] 
 			\centering
-			\includegraphics[]{img/graf_staticka.pdf} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-			%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
+			\includegraphics[]{img/graf_staticka.pdf} 
 			\caption{Statická charakteristika soustavy v otevřené smyčce pro rozsah vstupní veličiny -1.6 V až 1.6 V. 
 			Lineární část kladné větve (fialově) je proložena lineárním fitem $y=(-11.9\pm 0.9)x+(-6.6\pm 0.7)$, 
 			lineární část záporné větve (zeleně) je fitována lineární funkcí $y=(-10.9\pm 0.9)x+(6\pm 0.6)$, 
-			kde $y$ je výstupní veličina v mV a $x$ je vstupní veličina ve V.} %popisek obrázku, který se zobrazí pod obrázkem
-			\label{fig:staticka} %interní popis obrázku, který použijete k odkazování se
+			kde $y$ je výstupní veličina v mV a $x$ je vstupní veličina ve V.} 
+			\label{fig:staticka}
 		\end{figure}
 
 
@@ -97,60 +94,58 @@ Na obrázku Obr.\ref{fig:schema_reg} je vyobrazeno schéma regulované soustavy,
 		\end{equation}
 		kde $k$ je zesílení a $T$ je časová konstanta. Tyto parametry pro měřenou soustavu jsou přibližně $k=5$ a $T=150\unit{ms}$
 
-		\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+		\begin{figure}[!hbt]
 			\centering
-			\includegraphics[]{img/graf_prechodova.pdf} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-			%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
+			\includegraphics[]{img/graf_prechodova.pdf} 
 			\caption{Přechodová charakteristika soustavy v otevřené smyčce (závislost napětí z tachogenerátoru na čase) 
 			pro skokovou změnu řídící veličiny z 0.6 V na 1.6 V. 
-			Fialové body jsou hodnoty přechodové charakteristiky modelu získaného odhadem parametrů a zelené body jsou naměřená data.} %popisek obrázku, který se zobrazí pod obrázkem
-			\label{fig:prechodova} %interní popis obrázku, který použijete k odkazování se
+			Fialové body jsou hodnoty přechodové charakteristiky modelu získaného odhadem parametrů a zelené body jsou naměřená data.} 
+			\label{fig:prechodova} 
 		\end{figure}
 
 	\subsection{Amplitudová a fázová frekvenční charakteristika v otevřené smyčce}
+		Graf frekvenční charakteristiky v otevřené smyčce je na Obr.~\ref{fig:bode_otevrena}. Horní graf představuje závislost amplitudy $A$ v dB na frekvenci $f$ (osa frekvence je logaritmická). Pro frekvence do přibližně 0.5 Hz je závislost víceméně konstantní, poté nastává zlom a průběh se mění na klesající funkci $A=(-20.5\pm 0.6)\log(f)+(-4.0\pm 0.2)$. Pokles na -3 dB nastává zhruba při frekvenci 0.9 Hz. Spodní graf představuje závislost fázového posunu $\phi$ na frekvenci $f$. Při přibližně 0.4 Hz je fázový posun roven 45$\deg$.
 
-		\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+		\begin{figure}[!hbt] 
 			\centering
-			\includegraphics[]{img/graf_amplitudova_otevrena.pdf} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-			%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
-			\caption{$ A=(-20.5\pm 0.6)\log_10(f)+(-4\pm 0.2)$} %popisek obrázku, který se zobrazí pod obrázkem
-			\label{fig:amplitudova_otevrena} %interní popis obrázku, který použijete k odkazování se
+			\includegraphics[]{img/graf_bode_otevrena.pdf} 
+			\caption{Graf frekvenční charakteristiky v otevřené smyčce. Horní graf představuje závislost amplitudy $A$ v dB na frekvenci $f$ (osa frekvence je logaritmická). Pro frekvence do přibližně 1 Hz je závislost víceméně konstantní, poté nastává zlom a průběh se mění na klesající funkci $A=(-20.5\pm 0.6)\log(f)+(-4.0\pm 0.2)$. Pokles na -3 dB nastává zhruba při frekvenci 0.9 Hz. Spodní graf představuje závislost fázového posunu $\phi$ na frekvenci $f$. Při přibližně 0.4 Hz je fázový posun roven 45$\deg$.} 
+			\label{fig:bode_otevrena}
 		\end{figure}
 
-
-		\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
-			\centering
-			\includegraphics[]{img/graf_fazova_otevrena.pdf} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-			%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
-			\caption{...} %popisek obrázku, který se zobrazí pod obrázkem
-			\label{fig:fazova} %interní popis obrázku, který použijete k odkazování se
-		\end{figure}
 
 	\subsection{Přechodová charakteristika v uzavřené smyčce}
-
-	\subsection{Amplitudová a fázová frekvenční charakteristika v uzavřené smyčce}
-		\begin{figure}[!hbt] %bez této hranaté závorky se obrázek umístí na vrchol stránky
+		\begin{figure}[!hbt] 
 			\centering
-			\includegraphics[]{img/graf_amplitudova_uzavrena.pdf} %nejdůležitější řádek - obsahuje cestu k obrázku a také jeho relativní šířku k šířce textu
-			%všiměte si, že je možné vložit obrázek vnořený ve složce img - tam poté můžete ukládat další obrázky 
-			\caption{$A=(-12.1\pm 0.9)log_10(f)+(-8.1\pm 0.4)$} %popisek obrázku, který se zobrazí pod obrázkem
-			\label{fig:amplitudova_uzavrena} %interní popis obrázku, který použijete k odkazování se
+			\includegraphics[scale=0.6]{img/SDS00001.jpg} 
+			\caption{$T=16\unit{ms}, k=2$} 
+			\label{fig:prechodova_uzavrena_k2}
 		\end{figure}
 
-		Prvním bodem vypracování by měl být odkaz na vypracovaný domácí úkol, který bývá většinou v části Příloha.
-		Samotné vypracování všech pracovních úkolů, sekce by měla obsahovat všechny naměřené hodnoty (v případě extrémně velkých tabulek je možné je dát do přílohy) a grafy.
-			Naměřené hodnoty se nachází v Tab.~\ref{tab:vzor}. Kód na psaní jednotek v hlavičce tabulky: \\ \verb|\tabh{I}{mA} & \tabh{v}{m \cdot s^{-1}}|.
-				\begin{table}[!ht]
-				  \centering
-				    \begin{tabular}{|r|r|r|r|r|r|}
-				    	\hline
-				    	\tabh{I}{mA} & \tabh{v}{m \cdot s^{-1}} & \tabh{m}{kg}& \tabh{Q}{C} & \tabh{n}{mol} & \tabh{T}{\celsius} \\ \hline\hline
-				    	     331 &                            -9 &      351 &       8 &     -0,53 &           0,64 \\ \hline
-				    	     714 &                          -142 &      718 &     145 &     -0,07 &           0,07 \\ \hline
-				    \end{tabular}
-				  \caption{Popis vzorové tabulky. $I$ jsou naměřené hodnoty proudu, měřené s chybou $\pm1$ mA,\dots }
-				  \label{tab:vzor}
-				\end{table}
+		\begin{figure}[!hbt] 
+			\centering
+			\includegraphics[scale=0.6]{img/SDS00002.jpg} 
+			\caption{$T=34\unit{ms}, k=1$} 
+			\label{fig:prechodova_uzavrena_k1}
+		\end{figure}
+
+	\subsection{Amplitudová charakteristika v uzavřené smyčce}
+		Na Obr.~\ref{fig:amplitudova_uzavrena} je graf amplitudové frekvenční charakteristiky v uzavřené smyčce. Pro frekvence do přibližně 1 Hz je závislost přibližně konstantní, poté se amplituda klesá s funkcí $A=(-12.1\pm 0.9)log(f)+(-8.1\pm 0.4)$. Pokles o 3 db nastává při frekvenci přibližně 2.1 Hz
+		\begin{figure}[!hbt] 
+			\centering
+			\includegraphics[]{img/graf_amplitudova_uzavrena.pdf} 
+			\caption{graf amplitudové frekvenční charakteristiky v uzavřené smyčce. Pro frekvence do přibližně 1 Hz je závislost přibližně konstantní, poté se amplituda klesá s funkcí $A=(-12.1\pm 0.9)\log(f)+(-8.1\pm 0.4)$. Pokles o 3 db nastává při frekvenci přibližně 2.1 Hz} 
+			\label{fig:amplitudova_uzavrena}
+		\end{figure}
+
+	\subsection{Metoda \uv{pokus-omyl}}
+	
+		\begin{figure}[!hbt] 
+			\centering
+			\includegraphics[scale=0.6]{img/SDS00003.jpg} 
+			\caption{$T=16.4\unit{ms}, k=2$, regulační odchylka 0.076 V} 
+			\label{fig:pokus_omyl}
+		\end{figure}
 								
 				
 			
